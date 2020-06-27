@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Comatible" content="IE-edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Registration Form</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
+	<link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/registration.css">
+
+	
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->	<!-- WARNING: Respond.js doesn&apos;t work if you view the page via file:// -->	<!--[if lt IE 9]>	<script src="<a href="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script">https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script</a>>	<script src="<a href="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script">https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script</a>>	<![endif]-->
+
+</head>
+<body>
+<div class="box">
+	<div class="co-form">
+						<div class="heading">
+						<h3 style="padding-bottom: 5px;">White Board</h3>
+						<p style="font-size:20px; color: #888888;">Register to start using White Board</p>
+						</div>
+		<div class="form1">
+			<form action="http://localhost/projectv1/php/registration.php" method="post">
+				<div class="name">
+					<div class="n-m" style="margin-right: 15px; display:inline; float:left;">
+					<span>First Name</span>
+					<input class="input100" type="text" name="firstname">
+					</div> <!-- firstname -->
+							
+					<div class="n-m" style="display: inline;/* float:  left; *">
+					<span>Last Name</span>
+					<input class="input100" type="text" name="lastname" style="display: inline;width: 48%;">
+					</div> <!-- lastname -->
+				</div> <!-- name -->
+				
+					<div class="n-m" >
+						<span>Email</span>
+						<input class="input100" type="Email" name="email" style="width: 207%;">
+					</div> <!-- email -->
+					
+							
+					<div class="n-m">
+						<span>Enrolment</span>
+						<input class="input100" type="text" name="enrolment" >
+					</div> <!-- enrolment -->
+
+							
+					<div class="Password">
+						<div class="n-m inline" style="margin-right: 15px">
+						<span>Password</span>
+						<input class="input100" type="password" name="password">
+						</div>
+						<div class="n-m inline">
+							<span>Confirm Password</span>
+							<input class="input100" type="password" name="confirmpassword">
+						</div>
+						<p style="font-size: 12px; color: #888888;">Use more than 8 characters with letters,numbers & symbols.</p>
+					</div> <!-- password -->
+
+					<span>error message</span> 
+
+					<div class="end">
+
+						<a href="http://localhost/projectv1/php/login.php" class="login inline"><span>Log In instead</span></a>
+						<div class="co-btn" style="padding-top: 20px;">
+						
+						<button type="submit" class="btn-f inline">Submit</button>
+						</div>
+					
+					</div><!-- end -->
+			</form>
+		</div><!-- form1 -->
+		<div class="help-aboutus">
+		<a href="help.html">Help</a>
+		<a href="aboutus.html">About Us</a>
+	</div> 
+</div> <!-- co-form -->
+	
+</div>
+</body>
+</html>

@@ -5,7 +5,7 @@
     session_start();
     
     if(!isset($_SESSION['user']) || !isset($_SESSION['faculty'])) {
-        header("Location: http://localhost/projectv2/php/user_login_page.php");
+        header("Location: http://localhost/whiteboard/php/user_login_page.php");
     } else {
         $date = $_POST['date_picker'];
         echo $date;

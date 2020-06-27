@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
       <link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
-      <link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/registration.css">
+      <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/registration.css">
    </head>
    <body>
       <div class="box">
@@ -16,7 +16,7 @@
                <p style="font-size:20px; color: #888888;">Register to start using White Board</p>
             </div>
             <div class="form1">
-               <form action="http://localhost/projectv2/php/user_registration.php" method="post">
+               <form action="http://localhost/whiteboard/php/user_registration.php" method="post">
                   <div class="name" style="padding-top: px;">
                      <div class="n-m" style="margin-right: 15px; display:inline; float:left;">
                         <span>First Name</span>
@@ -53,7 +53,7 @@
                   </div>
                   <!-- contact -->
                   <div class="end">
-                     <a href="http://localhost/projectv2/php/user_login_page.php" class="login inline"><span>Log In instead</span></a>
+                     <a href="http://localhost/whiteboard/php/user_login_page.php" class="login inline"><span>Log In instead</span></a>
                      <div class="co-btn" style="padding-top: 20px;">
                         <button type="submit" class="btn-f inline">Submit</button>
                      </div>
@@ -63,8 +63,8 @@
             </div>
             <!-- form1 -->
             <div class="help-aboutus">
-               <a href="http://localhost/projectv1/html/help.html">Help</a>
-               <a href="http://localhost/projectv1/html/about.html">About Us</a>
+               <a href="http://localhost/whiteboard/html/help.html">Help</a>
+               <a href="http://localhost/whiteboard/html/about.html">About Us</a>
             </div>
          </div>
       </div>

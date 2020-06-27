@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
       <link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
-      <link rel="stylesheet" type="text/css" href="http://localhost/projectv2/css/login.css" media="all">
+      <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/login.css" media="all">
    </head>
    <body>
       <div class="box">
@@ -18,7 +18,7 @@
                <p style="font-size:20px; color: #888888; text-align: center;">to start using White Board</p>
             </div>
             <div class="form1">
-               <form action="http://localhost/projectv2/php/user_login.php" method="post">
+               <form action="http://localhost/whiteboard/php/user_login.php" method="post">
                   <div class="name" style="width: 100%;">
                      <div class="n-m" style="margin-right: 15px; width: 100%; ">
                         <span>Email</span>
@@ -29,7 +29,7 @@
                         <span>Password</span>
                         <input class="input100" type="password" name="password">
                         <div style="padding-top: 10px; font-size: 14px;">
-                           <a href="http://localhost/projectv2/php/user_password_forgot_page.php"> Forgot your password ?</a>
+                           <a href="http://localhost/whiteboard/php/user_password_forgot_page.php"> Forgot your password ?</a>
                         </div>
                         <?php 
                            if(isset($_GET['error_msg'])) {
@@ -41,7 +41,7 @@
                   </div>
                   <!-- name -->
                   <div class="end">
-                     <a href="http://localhost/projectv2/php/user_registration_page.php" class="login"><span>Create an account</span></a>
+                     <a href="http://localhost/whiteboard/php/user_registration_page.php" class="login"><span>Create an account</span></a>
                      <div class="co-btn" style="padding-top: 20px;">
                         <button type="submit" class="btn-f inline">Sign In</button>
                      </div>
@@ -51,8 +51,8 @@
             </div>
             <!-- form1 -->
             <div class="help-aboutus">
-               <a href="http://localhost/projectv2/html/help.html">Help</a>
-               <a href="http://localhost/projectv2/html/about.html">About Us</a>
+               <a href="http://localhost/whiteboard/html/help.html">Help</a>
+               <a href="http://localhost/whiteboard/html/about.html">About Us</a>
             </div>
          </div>
          <!-- co-form -->

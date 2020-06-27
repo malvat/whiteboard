@@ -19,22 +19,22 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
       
-      <link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/main.css ">
-      <link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/responsive.css">
+      <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/main.css ">
+      <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/responsive.css">
        
    </head>
    <body>
       <div class="side_panel">
          <div class="profile" style="text-align:center;width: 100%;">
-            <img src="http://localhost/projectv1/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
+            <img src="http://localhost/whiteboard/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
             <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $firstname; echo " " ;echo $lastname; ?></h3>
          </div>
          <!-- profile -->
          <div class="sidebar">
             <ul>
-               <li><a href="http://localhost/projectv2/php/faculty/faculty_home.php" >Home</a></li>
+               <li><a href="http://localhost/whiteboard/php/faculty/faculty_home.php" >Home</a></li>
                <li><a href="#">Academics</a></li>
-               <li><a href="http://localhost/projectv2/php/faculty/faculty_attendance.php">Attendance</a></li>
+               <li><a href="http://localhost/whiteboard/php/faculty/faculty_attendance.php">Attendance</a></li>
                 <?php 
                     
                     $sql = "select * from roles where roles='timetable_coordinator'";
@@ -45,17 +45,17 @@
                         $sql = "select * from user_roles where user_id = '$user_id' and roles_id = '$roles_id'";
                         if($results = $conn->query($sql)) {
                             if($results->num_rows > 0) {
-                                echo "<li><a href='http://localhost/projectv2/php/faculty/faculty_timetable.php' class='active'>Time Table </a></li>";
+                                echo "<li><a href='http://localhost/whiteboard/php/faculty/faculty_timetable.php' class='active'>Time Table </a></li>";
                             } else {
-                                header("Location:http://localhost/projectv2/php/faculty/faculty_home.php");
+                                header("Location:http://localhost/whiteboard/php/faculty/faculty_home.php");
                             }
                         }
                     }
                 ?>
                
-               <li><a href="http://localhost/projectv1/php/student/student_aboutus.php">About us</a></li>
-               <li><a href="http://localhost/projectv1/cuber/cuber.html">Cuber Game</a></li>
-               <li><a href="http://localhost/projectv1/shootdemsquares/index.html">Shoot Dem Squares</a></li>
+               <li><a href="http://localhost/whiteboard/php/student/student_aboutus.php">About us</a></li>
+               <li><a href="http://localhost/whiteboard/cuber/cuber.html">Cuber Game</a></li>
+               <li><a href="http://localhost/whiteboard/shootdemsquares/index.html">Shoot Dem Squares</a></li>
             </ul>
          </div>
          <!--  sidebar -->
@@ -70,7 +70,7 @@
          </div>
          <!-- end Search form -->
          <div class="btn1">
-            <form action="http://localhost/projectv2/php/user_logout.php" method="get">
+            <form action="http://localhost/whiteboard/php/user_logout.php" method="get">
                <input type="submit" class="but" value ="Log Out">
             </form>
          </div>

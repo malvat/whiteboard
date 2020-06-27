@@ -23,8 +23,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
     <link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
-    <link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/main.css ">
-    <link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/main.css ">
+    <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/responsive.css">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -38,7 +38,7 @@
 
         <div class="profile" style="text-align:center;width: 100%;">
 
-                <img src="http://localhost/projectv1/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
+                <img src="http://localhost/whiteboard/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
 
                 <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $user->getFirstName(); echo " " ;echo $user->getLastName(); ?></h3>
 
@@ -48,11 +48,11 @@
         <div class="sidebar">
 
             <ul>
-                <li><a href="http://localhost/projectv1/php/student/student_profile.php" class="active">Select Role</a></li>
-                <li><a href="http://localhost/projectv1/php/student/student_profile.php" >Settings</a></li>
-                <li><a href="http://localhost/projectv1/php/student/student_aboutus.php">About us</a></li>
-                <li><a href="http://localhost/projectv1/cuber/cuber.html">Cuber Game</a></li>
-                <li><a href="http://localhost/projectv1/shootdemsquares/index.html">Shoot Dem Squares</a></li>
+                <li><a href="http://localhost/whiteboard/php/student/student_profile.php" class="active">Select Role</a></li>
+                <li><a href="http://localhost/whiteboard/php/student/student_profile.php" >Settings</a></li>
+                <li><a href="http://localhost/whiteboard/php/student/student_aboutus.php">About us</a></li>
+                <li><a href="http://localhost/whiteboard/cuber/cuber.html">Cuber Game</a></li>
+                <li><a href="http://localhost/whiteboard/shootdemsquares/index.html">Shoot Dem Squares</a></li>
             </ul>
         </div><!--  sidebar -->
     </div> <!-- sidenel-->
@@ -68,7 +68,7 @@
         </div> <!-- end Search form -->
 
         <div class="btn1">
-            <form action="http://localhost/projectv2/php/user_logout.php" method="get">
+            <form action="http://localhost/whiteboard/php/user_logout.php" method="get">
                <input type="submit" class="but" value ="Log Out"/>
             </form>
         </div> <!-- btn -->

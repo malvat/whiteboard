@@ -9,7 +9,7 @@
                 $sql = "update user set status = 1 where email = '$email'";
                 if($conn->query($sql)) {
                     echo "successful";
-                    header("Location: http://localhost/projectv2/php/user_login_page.php?error_msg=Verfication Successful.");
+                    header("Location: http://localhost/whiteboard/php/user_login_page.php?error_msg=Verfication Successful.");
                 } else {
                     echo "error update nahi hua";
                 }

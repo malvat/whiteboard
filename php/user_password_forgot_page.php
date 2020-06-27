@@ -7,7 +7,7 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
       <link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
-      <link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/login.css" media="all">
+      <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/login.css" media="all">
    </head>
    <body>
       <div class="box">
@@ -18,7 +18,7 @@
                <p style="font-size:20px; color: #888888; text-align: center;">Check your mail for reset</p>
             </div>
             <div class="form1">
-               <form action="http://localhost/projectv2/php/user_password_forgot.php" method="post">
+               <form action="http://localhost/whiteboard/php/user_password_forgot.php" method="post">
                   <div class="name" style="width: 100%;">
                      <div class="n-m" style="margin-right: 15px; width: 100%; padding-top: 30px; ">
                         <span>Email</span>
@@ -38,7 +38,7 @@
                   </div>
                   <!-- name -->
                   <div class="end">
-                     <a href="http://localhost/projectv1/index.html" class="login"><span>Create an account</span></a>
+                     <a href="http://localhost/whiteboard/index.html" class="login"><span>Create an account</span></a>
                      <div class="co-btn" >
                         <button type="submit" class="btn-f inline">Reset</button>
                      </div>
@@ -48,8 +48,8 @@
             </div>
             <!-- form1 -->
             <div class="help-aboutus">
-               <a href="http://localhost/projectv1/html/help.html">Help</a>
-               <a href="http://localhost/projectv1/html/about.html">About Us</a>
+               <a href="http://localhost/whiteboard/html/help.html">Help</a>
+               <a href="http://localhost/whiteboard/html/about.html">About Us</a>
             </div>
          </div>
          <!-- co-form -->

@@ -27,7 +27,7 @@
                     session_start();
                     $_SESSION['user'] = $user;
                     echo $user->getFirstName();
-                    header("Location: http://localhost/projectv2/php/user_check_roles.php");
+                    header("Location: http://localhost/whiteboard/php/user_check_roles.php");
                    // session_destroy();
                 } else {
                     //error

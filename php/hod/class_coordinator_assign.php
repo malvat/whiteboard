@@ -2,7 +2,7 @@
     require('../db_config.php');
     //do something to authenticate
     if(!isset($_GET['faculty']) && !isset($_GET['class'])) {
-        header("Location: http://localhost/projectv2/php/hod/hod_home.php");
+        header("Location: http://localhost/whiteboard/php/hod/hod_home.php");
     } else {
         $user_id = $_GET['faculty'];
         $class_id = $_GET['class'];
@@ -11,21 +11,21 @@
             if($results->num_rows>0) {
                $msg="Faculty already has class assigned";
                 echo "<script type=text/javascript>  alert('$msg'); ";
-                $url = "http://localhost/projectv2/php/hod/hod_class_coordinator.php";
+                $url = "http://localhost/whiteboard/php/hod/hod_class_coordinator.php";
                 echo "location.href = '$url'; </script>"; 
             } else {
                 $sql = "insert into class_coordinator(user_id, class_id) values('$user_id', '$class_id')";
                 if($conn->query($sql)) {
                     $msg="Class was assigned";
                     echo "<script type=text/javascript>  alert('$msg'); ";
-                    $url = "http://localhost/projectv2/php/hod/hod_class_coordinator.php";
+                    $url = "http://localhost/whiteboard/php/hod/hod_class_coordinator.php";
                     echo "location.href = '$url'; </script>";
                 } else {
                     echo "kaink locho";
                 }
             }
         } else {
-            header("Location: http://localhost/projectv2/php/hod/hod_class_coordinator.php");
+            header("Location: http://localhost/whiteboard/php/hod/hod_class_coordinator.php");
         }
         
     }

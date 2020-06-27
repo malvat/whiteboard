@@ -71,7 +71,7 @@
         $msg.= "Branch - ".$branch."\n";
         $msg.= "Please click below link to provide such role : \n";
         $email = "malvat.anim0@gmail.com";
-        $msg.="http://localhost/projectv2/php/role_selection.php?user_id=".$user->getId()."&verification_code=".$verification_code."&roles_id=".$roles_id."&branch=".$branch;
+        $msg.="http://localhost/whiteboard/php/role_selection.php?user_id=".$user->getId()."&verification_code=".$verification_code."&roles_id=".$roles_id."&branch=".$branch;
         $to = $email;
         $subject = "White Board - HOD Role Access";
         $headers = "From: anim@whiteboard.com";
@@ -94,7 +94,7 @@
             success: function(d) {
                 $('#eg').text(d);
                 if(d == 'done') {
-                    window.location ="http://localhost/projectv2/php/user_check_roles.php";
+                    window.location ="http://localhost/whiteboard/php/user_check_roles.php";
                 }
             }
         })

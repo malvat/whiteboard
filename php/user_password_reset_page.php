@@ -39,7 +39,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
 	<link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
-	<link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/login.css" media="all">
+	<link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/login.css" media="all">
 
 </head>
 
@@ -52,7 +52,7 @@
 				<p style="font-size:20px; color: #888888; text-align: center;">Try to use new password</p>
 			</div>
 			<div class="form1">
-				<form action="http://localhost/projectv2/php/user_password_update.php?email=<?php echo $email ?> " method="post">
+				<form action="http://localhost/whiteboard/php/user_password_update.php?email=<?php echo $email ?> " method="post">
 					<div class="name" style="width: 100%;">
 						
 
@@ -79,7 +79,7 @@
 
 					<div class="end">
 
-						<a href="http://localhost/projectv1/index.html" class="login"><span>Create an account</span></a>
+						<a href="http://localhost/whiteboard/index.html" class="login"><span>Create an account</span></a>
 						<div class="co-btn">
 
 							<button type="submit" class="btn-f inline">Reset</button>
@@ -91,8 +91,8 @@
 				</form>
 			</div><!-- form1 -->
 			<div class="help-aboutus">
-				<a href="http://localhost/projectv1/html/help.html">Help</a>
-				<a href="http://localhost/projectv1/html/about.html">About Us</a>
+				<a href="http://localhost/whiteboard/html/help.html">Help</a>
+				<a href="http://localhost/whiteboard/html/about.html">About Us</a>
 			</div>
 		</div> <!-- co-form -->
 

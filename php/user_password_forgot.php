@@ -107,7 +107,7 @@
 
     function sendVerificationMail($code, $email) {
         $msg = "click below link for resetting: \n";
-        $msg.= "http://localhost/projectv2/php/user_password_reset_page.php?verification_code=".$code."&email=".$email;
+        $msg.= "http://localhost/whiteboard/php/user_password_reset_page.php?verification_code=".$code."&email=".$email;
         $to = $email;
         $subject = "Reset You Password";
         $headers = "From: anim@whiteboard.com";

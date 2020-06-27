@@ -8,7 +8,7 @@
     $date_picker = $_POST['date_picker'];
     
     $sql = "select firstname, lastname, enrolment, student.user_id as sid from student inner join user on user.id = student.user_id inner join class on student.class_id = class.id where semester = '$semester' and division = '$division'";
-    echo "<form action='http://localhost/projectv2/php/faculty/attendance_upload.php' method='post'>";
+    echo "<form action='http://localhost/whiteboard/php/faculty/attendance_upload.php' method='post'>";
     if($results = $conn->query($sql)) {
         while($row = $results->fetch_assoc()) {
             $id = $row['sid'];

@@ -12,9 +12,9 @@
             if($results->num_rows > 0) {
                 $row = $results->fetch_assoc();
                 echo $row['roles'];  
-                echo '<br><a href="http://localhost/projectv2/php/user_logout.php"> Logout </a>';
+                echo '<br><a href="http://localhost/whiteboard/php/user_logout.php"> Logout </a>';
                 if($row['roles'] == 'admin') {
-                    header("location: http://localhost/projectv2/php/admin/admin_home.php");
+                    header("location: http://localhost/whiteboard/php/admin/admin_home.php");
                 } else if($row['roles'] == 'hod') {
                    
                     $id = $_SESSION['user']->getId();
@@ -26,7 +26,7 @@
                         $hod = new Hod($id, $branch);
                         $_SESSION['hod'] = $hod;
                     }
-                    header("location: http://localhost/projectv2/php/hod/hod_home.php");   
+                    header("location: http://localhost/whiteboard/php/hod/hod_home.php");   
                     
                 } else if($row['roles'] == 'faculty') {
                     $id = $_SESSION['user']->getId();
@@ -38,7 +38,7 @@
                         $faculty = new Faculty($id, $branch);
                         $_SESSION['faculty'] = $faculty;
                     }
-                    header("location: http://localhost/projectv2/php/faculty/faculty_home.php");
+                    header("location: http://localhost/whiteboard/php/faculty/faculty_home.php");
                 } else if($row['roles'] == 'student') {
                     $id = $_SESSION['user']->getId();
                     $sql = "select * from student where user_id ='$id'";
@@ -51,13 +51,13 @@
                         $student = new Student($cc_id, $branch, $enrolment, $class_id);
                         $_SESSION['student'] = $student;
                     }
-                    header("location: http://localhost/projectv2/php/student/student_home.php");
+                    header("location: http://localhost/whiteboard/php/student/student_home.php");
                 }
                 //after getting roles redirect to appropriate profile or dashboard
             } else {
                 echo "please select role";
                 //redirecting to user profile //that's general profile
-                header("location: http://localhost/projectv2/php/user_select_roles_page.php");
+                header("location: http://localhost/whiteboard/php/user_select_roles_page.php");
             }
             
         } else {

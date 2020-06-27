@@ -13,7 +13,7 @@
             if($results = $conn->query($sql)) {
                 if($results->num_rows > 0) {
                     //display the page
-                    header("Location: http://localhost/projectv2/php/user_password_reset_page.php?verification_code='$code'&email='$email'");
+                    header("Location: http://localhost/whiteboard/php/user_password_reset_page.php?verification_code='$code'&email='$email'");
                 } else {
                     //redirect
                     echo "evu koi verificaiton code nathi";

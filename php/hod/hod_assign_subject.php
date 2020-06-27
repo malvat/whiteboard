@@ -5,7 +5,7 @@
     session_start();
     $user = $_SESSION['user'];
     if(!isset($_SESSION['user']) && !isset($_SESSION['hod'])){
-        header("http://localhost/projectv2/php/user_login_page.php");
+        header("http://localhost/whiteboard/php/user_login_page.php");
     } else {
         $user = $_SESSION['user'];
         $firstname = $user->getFirstName();
@@ -25,8 +25,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
         <link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
-        <link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/main.css ">
-        <link rel="stylesheet" type="text/css" href="http://localhost/projectv1/css/responsive.css">
+        <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/main.css ">
+        <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/responsive.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn&apos;t work if you view the page via file:// -->
         <!--[if lt IE 9]>	<script src="<a href="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script">https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script</a>>	<script src="<a href="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script">https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script</a>>	<![endif]-->
@@ -34,19 +34,19 @@
     <body>
         <div class="side_panel">
             <div class="profile" style="text-align:center;width: 100%;">
-                <img src="http://localhost/projectv1/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
+                <img src="http://localhost/whiteboard/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
                 <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $firstname; echo " " ;echo $lastname; ?></h3>
             </div>
             <!-- profile -->
             <div class="sidebar">
                 <ul>
-                    <li><a href="http://localhost/projectv2/php/hod/hod_home.php" >Home</a></li>
-               <li><a href="http://localhost/projectv2/php/hod/hod_assign_subject.php" class="active">Subject Assigning</a></li>
-               <li><a href="http://localhost/projectv2/php/hod/hod_time_table.php">Time Table Commitee</a></li>
+                    <li><a href="http://localhost/whiteboard/php/hod/hod_home.php" >Home</a></li>
+               <li><a href="http://localhost/whiteboard/php/hod/hod_assign_subject.php" class="active">Subject Assigning</a></li>
+               <li><a href="http://localhost/whiteboard/php/hod/hod_time_table.php">Time Table Commitee</a></li>
               
                <li><a href="#">About us</a></li>
-               <li><a href="http://localhost/projectv1/cuber/cuber.html">Cuber Game</a></li>
-               <li><a href="http://localhost/projectv1/shootdemsquares/index.html">Shoot Dem Squares</a></li>
+               <li><a href="http://localhost/whiteboard/cuber/cuber.html">Cuber Game</a></li>
+               <li><a href="http://localhost/whiteboard/shootdemsquares/index.html">Shoot Dem Squares</a></li>
                 </ul>
             </div>
             <!--  sidebar -->
@@ -61,7 +61,7 @@
             </div>
             <!-- end Search form -->
             <div class="btn1">
-                <form action="http://localhost/projectv2/php/user_logout.php" method="get">
+                <form action="http://localhost/whiteboard/php/user_logout.php" method="get">
                     <input type="submit" class="but" value ="Log Out">
                 </form>
             </div>
@@ -71,7 +71,7 @@
         <section class="canvas fl-left">
             <!-- main section -->
             <div class="news" style="width:60%; left:30%; height:70%; padding-top: 4%;">
-                <form action="http://localhost/projectv2/php/hod/subject_assigned.php" method="get">
+                <form action="http://localhost/whiteboard/php/hod/subject_assigned.php" method="get">
                 
                 faculty
                 <!--              php code for fetching faculty names-->
@@ -157,7 +157,7 @@
                  <br>
             <br>
 <!--                putting button so hod can see all the subjects and teachers assigned and delete some of them if they need to -->
-            <a href="http://localhost/projectv2/php/hod/hod_view_assigned_subjects.php"> View All Assigned Subjects </a>
+            <a href="http://localhost/whiteboard/php/hod/hod_view_assigned_subjects.php"> View All Assigned Subjects </a>
             </div>
             
         </section>
@@ -176,7 +176,7 @@
                     success: function(d) {
                         $('#subject').html(d);
                         if(d == 'done') {
-                            window.location ="http://localhost/projectv2/php/user_check_roles.php";
+                            window.location ="http://localhost/whiteboard/php/user_check_roles.php";
                         }
                     }   
                 })
@@ -188,7 +188,7 @@
                     success: function(d) {
                         $('#class').html(d);
                         if(d == 'done') {
-                            window.location ="http://localhost/projectv2/php/user_check_roles.php";
+                            window.location ="http://localhost/whiteboard/php/user_check_roles.php";
                         }
                     }   
                 })

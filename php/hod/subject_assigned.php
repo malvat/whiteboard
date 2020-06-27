@@ -22,7 +22,7 @@
                 //faculty is assigned subject already
                 $msg="subject is already assigned to the faculty";
                 echo "<script type=text/javascript>  alert('$msg'); ";
-                $url = "http://localhost/projectv2/php/hod/hod_assign_subject.php";
+                $url = "http://localhost/whiteboard/php/hod/hod_assign_subject.php";
                 echo "location.href = '$url'; </script>";
             } else {
                 //if the faculty is not assigned that subject 
@@ -31,12 +31,12 @@
                 if($conn->query($sql)) {
                     $msg="subject was assigned";
                     echo "<script type=text/javascript>  alert('$msg'); ";
-                    $url = "http://localhost/projectv2/php/hod/hod_assign_subject.php";
+                    $url = "http://localhost/whiteboard/php/hod/hod_assign_subject.php";
                     echo "location.href = '$url'; </script>";
 
 
                 } else {
-                    header("location: http://localhost/projectv2/php/hod/hod_assign_subject.php");
+                    header("location: http://localhost/whiteboard/php/hod/hod_assign_subject.php");
                 }
             }
         } else {

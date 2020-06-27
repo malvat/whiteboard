@@ -4,7 +4,7 @@
     require('../user.php');
     session_start();
     if(!isset($_SESSION['user'])) {
-        header("Location: http://localhost/projectv2/php/user_login_page.php");
+        header("Location: http://localhost/whiteboard/php/user_login_page.php");
     } else {
         $semester = $_GET['semester'];
         $faculty = $_SESSION['faculty'];

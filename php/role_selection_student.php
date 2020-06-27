@@ -59,7 +59,7 @@
         $msg.= "Email - ".$user->getEmail()."\n";
         $msg.= "Please click below link to provide such role : \n";
         $enrolment = $_GET['enrolment'];
-        $msg.="http://localhost/projectv2/php/role_selection.php?user_id=".$user->getId()."&verification_code=".$verification_code."&roles_id=".$roles_id."&cc=".$cc."&enrolment=".$enrolment;
+        $msg.="http://localhost/whiteboard/php/role_selection.php?user_id=".$user->getId()."&verification_code=".$verification_code."&roles_id=".$roles_id."&cc=".$cc."&enrolment=".$enrolment;
         $to = $email;
         $subject = "White Board - Student Role Access";
         $headers = "From: anim@whiteboard.com";
@@ -84,7 +84,7 @@
             success: function(d) {
                 $('#eg').text(d);
                 if(d == 'done') {
-                    window.location ="http://localhost/projectv2/php/user_check_roles.php";
+                    window.location ="http://localhost/whiteboard/php/user_check_roles.php";
                 }
             }
         })

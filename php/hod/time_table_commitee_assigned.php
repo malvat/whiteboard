@@ -20,7 +20,7 @@
                 $flag = 1;
                 $msg = "faculty has been already given the role";
                 echo "<script type=text/javascript>  alert('$msg'); ";
-                $url = "http://localhost/projectv2/php/hod/hod_time_table.php";
+                $url = "http://localhost/whiteboard/php/hod/hod_time_table.php";
                 echo "location.href = '$url'; </script>";
             } else{
                 $flag = 0;
@@ -34,10 +34,10 @@
             if($conn->query($sql)) {
                 $msg="TT role assigned";
                 echo "<script type=text/javascript>  alert('$msg'); ";
-                $url = "http://localhost/projectv2/php/hod/hod_time_table.php";
+                $url = "http://localhost/whiteboard/php/hod/hod_time_table.php";
                 echo "location.href = '$url'; </script>";
             } else {
-                header("location: http://localhost/projectv2/php/hod/hod_time_table.php");
+                header("location: http://localhost/whiteboard/php/hod/hod_time_table.php");
             }    
         }
         

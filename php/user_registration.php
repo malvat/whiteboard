@@ -32,16 +32,16 @@
                 echo "some error occurred.";
             }
             sendVerificationMail($activation_code, $email);
-            header("Location: http://localhost/projectv2/php/user_login_page.php?error_msg=Registration Successful, Please verify email.");
+            header("Location: http://localhost/whiteboard/php/user_login_page.php?error_msg=Registration Successful, Please verify email.");
         }
     } else {
-        header("Location: http://projectv2/php/user_registration_page.php?error_msg=Sorry, There was
+        header("Location: http://whiteboard/php/user_registration_page.php?error_msg=Sorry, There was
         some error.");
     }
 
     function sendVerificationMail($activation_code, $email) {
         $msg = "Please Verify your email id by clicking below link : \n";
-        $msg.= "http://localhost/projectv2/php/verify.php?activation_code=".$activation_code."&email=".$email;
+        $msg.= "http://localhost/whiteboard/php/verify.php?activation_code=".$activation_code."&email=".$email;
         $to = $email;
         $subject = "White Board Email Verification";
         $headers = "From: anim@whiteboard.com";

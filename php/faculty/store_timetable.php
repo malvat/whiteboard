@@ -4,7 +4,7 @@
     require('../faculty.php');
     session_start();
     if(!isset($_SESSION['faculty'])) {
-        header("location: http://localhost/projectv2/php/user_login.page.php");
+        header("location: http://localhost/whiteboard/php/user_login.page.php");
     }
     echo $_GET['semester'];
     echo $_GET['division'];

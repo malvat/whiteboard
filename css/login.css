@@ -172,8 +172,6 @@ select:focus {
   cursor: pointer;
 }
 
-
-
 .login {
   position: absolute;
   bottom: 9%;
@@ -187,6 +185,7 @@ select:focus {
   padding-right: 10px;
   font-size: 12px;
 }
+
 .help-aboutus {
   width: 35%;
   background-color: #fff;

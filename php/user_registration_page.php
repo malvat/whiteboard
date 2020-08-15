@@ -9,30 +9,37 @@
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/registration.css">
    </head>
    <body>
+      <!-- main container box  -->
       <div class="box">
+         <!-- form box  -->
          <div class="co-form">
+            <!-- heading of the form : White Board  -->
             <div class="heading">
                <h3 style="padding-bottom: 5px;">White Board</h3>
                <p style="font-size:20px; color: #888888;">Register to start using White Board</p>
             </div>
+            <!-- the form itself  -->
             <div class="form1">
                <form action="http://localhost/whiteboard/php/user_registration.php" method="post">
-                  <div class="name" style="padding-top: px;">
+                  <!-- name class  -->
+                  <div class="name">
+                     <!-- first name  -->
                      <div class="n-m" style="margin-right: 15px; display:inline; float:left;">
                         <span>First Name</span>
                         <input class="input100" type="text" name="firstname">
                      </div>
-                     <!-- firstname -->
-                     <div class="n-m" style="display: inline;/* float:  left; *">
+                     <!-- / firstname -->
+                     <!-- last name  -->
+                     <div class="n-m" style="display: inline;">
                         <span>Last Name</span>
                         <input class="input100" type="text" name="lastname" style="display: inline;width: 48%;">
                      </div>
-                     <!-- lastname -->
+                     <!-- / lastname -->
                   </div>
                   <!-- name -->
                   <div class="n-m">
                      <span>Email</span>
-                     <input class="input100" type="Email" name="email" style="width: 207%;">
+                     <input class="input100" type="email" name="email" style="width: 207%;">
                   </div>
                   <!-- email -->
                   <div class="Password">
@@ -53,15 +60,18 @@
                   </div>
                   <!-- contact -->
                   <div class="end">
-                     <a href="http://localhost/whiteboard/php/user_login_page.php" class="login inline"><span>Log In instead</span></a>
-                     <div class="co-btn" style="padding-top: 20px;">
-                        <button type="submit" class="btn-f inline">Submit</button>
+                     <div>
+                        <a href="http://localhost/whiteboard/php/user_login_page.php" class="login"><span>Log In instead</span></a>
+                     </div>
+                     <div>
+                        <button type="submit" class="btn-f">SUBMIT</button>
                      </div>
                   </div>
                   <!-- end -->
                </form>
             </div>
-            <!-- form1 -->
+            <!-- / form1 -->
+            <!-- use ful links  -->
             <div class="help-aboutus">
                <a href="http://localhost/whiteboard/html/help.html">Help</a>
                <a href="http://localhost/whiteboard/html/about.html">About Us</a>

@@ -41,9 +41,11 @@
                   </div>
                   <!-- name -->
                   <div class="end">
-                     <a href="http://localhost/whiteboard/php/user_registration_page.php" class="login"><span>Create an account</span></a>
-                     <div class="co-btn" style="padding-top: 20px;">
-                        <button type="submit" class="btn-f inline">Sign In</button>
+                     <div>
+                        <a href="http://localhost/whiteboard/php/user_registration_page.php" class="login"><span>Create an account</span></a>
+                     </div>
+                     <div>
+                        <button type="submit" class="btn-f">Log in</button>
                      </div>
                   </div>
                   <!-- end -->

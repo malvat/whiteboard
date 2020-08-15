@@ -26,7 +26,7 @@
    <body>
       <div class="side_panel">
          <div class="profile" style="text-align:center;width: 100%;">
-            <img src="http://localhost/whiteboard/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
+            <img src="http://localhost/whiteboard/images/helly.jpg" class="img-circle" alt="Cinque Terre" align="center" width="120" height="120">
             <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $firstname; echo " " ;echo $lastname; ?></h3>
          </div>
          <!-- profile -->
@@ -60,12 +60,6 @@
       </div>
       <!-- sidenel-->
       <section class="canvas">
-         <div class="Search">
-            <!-- Search form -->
-            <form class="form-inline">
-               <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-            </form>
-         </div>
          <!-- end Search form -->
          <div class="btn1">
             <form action="http://localhost/whiteboard/php/user_logout.php" method="get">

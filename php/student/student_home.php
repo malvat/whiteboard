@@ -26,7 +26,7 @@
    <body>
       <div class="side_panel">
          <div class="profile" style="text-align:center;width: 100%;">
-            <img src="http://localhost/whiteboard/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
+            <img src="http://localhost/whiteboard/images/profile.jpg" class="img-circle" alt="profile picture" align="center" width="120" height="120">
             <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $firstname; echo " " ;echo $lastname; ?></h3>
          </div>
          <!-- profile -->

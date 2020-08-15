@@ -32,8 +32,8 @@ ul {
 }
 body {
   background-color: #fff;
-  font-family: "Raleway", sans-serif;
-  font-weight: 900;
+  /* font-family: "Raleway", sans-serif; */
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
 }
 a,
@@ -97,30 +97,34 @@ s .realtive {
   background-color: #fff;
   overflow-x: hidden;
   position: fixed;
-  z-index: -1;
-  box-shadow: 2px 2px 10px grey;
-}
-.profile {
-  position: absolute;
-  top: 80px;
-   
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 
+/* profile photo */
+.profile {
+  top: 10%;   
+}
+
+/* profile name  */
 .profile h3 {
   color: #111;
-  padding-top: 10px;
-  font-size: 24px;
+  padding-top: 3%;
+  font-size: 2em;
   text-align: center;
 }
+
 .sidebar {
   color: #111;
   text-align: center;
   transform-origin: left;
   transform-style: preserve-3d;
-  transition: all 0.5s;
+  transition: all 1s;
   overflow: hidden;
-  top: 35%;
-  position: absolute;
 }
 
 .sidebar ul {
@@ -128,7 +132,7 @@ s .realtive {
   margin: 0px;
   list-style-type: none;
   text-decoration: none;
-  width: 240px;
+  width: 100%;
 }
 
 .sidebar ul li {
@@ -141,7 +145,7 @@ s .realtive {
   color: #111;
   padding: 10px;
   font-size: 18px;
-  font-weight: 500;
+  transition: all 0.4s;
 }
 
 .sidebar ul li a:hover {
@@ -187,27 +191,6 @@ s .realtive {
   right: 4%;
   top: 5.8%;
 }
-.btn1 {
-  display: inline-block;
-  padding: 6px 10px;
-  margin-bottom: 0;
-  font-size: 8px;
-  
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
 
 .but {
   background-color: #3f51b5ff;
@@ -218,7 +201,7 @@ s .realtive {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-
+  font-weight: 500;
   cursor: pointer;
 }
 
@@ -228,6 +211,19 @@ s .realtive {
 .work1 {
   width: 100%;
 }
+
+/* box shadows for each boxes or card like */
+.news, .Attendance, .Schedule, .Progress, .pendingwork {
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* giving padding card like structure  */
+.news h3, .Attendance h3, .Progress h3, .Schedule h3, .pendingwork h3 {
+  padding: 15px;
+}
+
+/* news card  */
+/* contains the information about any news or announcement that show up  */
 .news {
   width: 35%;
   height: 40%;
@@ -236,17 +232,11 @@ s .realtive {
   position: absolute;
   top: 19%;
   left: 19%;
-  /* right: 20%; */
   background: #fff;
-  box-shadow: 2px 2px 10px grey;
   text-align: center;
 }
 
-.news h3 {
-  font-weight: 500;
-  padding: 15px;
-  font-size: 26px;
-}
+
 .news ul {
   list-style-type: none;
   margin-top: 10px;
@@ -263,13 +253,6 @@ s .realtive {
   top: 19%;
   right: 19%;
   background: #fff;
-  box-shadow: 2px 2px 10px grey;
-}
-
-.Attendance h3 {
-    font-weight: 500;
-    padding: 15px;
-    font-size: 26px;
 }
 
 .Schedule {
@@ -281,14 +264,9 @@ s .realtive {
   top: 19%;
   right: 1%;
   background: #fff;
-  box-shadow: 2px 2px 10px grey;
   text-align: center;
 }
 
-.Schedule h3 {
-  
-  padding: 15px;
-}
 .Schedule ul {
   list-style-type: none;
   font-size: 18px;
@@ -302,6 +280,8 @@ s .realtive {
   color: #111;
   padding: 5px;
 }
+
+/* card for progress like structure  */
 .Progress {
   width: 30%;
   height: 32%;
@@ -311,17 +291,7 @@ s .realtive {
   bottom: 5%;
   left: 19%;
   text-align: center;
-  /* right: 47%; */
-  /* top: 33%; */
-
   background: #fff;
-  box-shadow: 2px 2px 10px grey;
-}
-
-.Progress h3 {
-    font-weight: 500;
-    padding: 15px;
-    font-size: 26px;
 }
 
 .pendingwork {
@@ -333,13 +303,9 @@ s .realtive {
   bottom: 5%;
   right: 1%;
   background: #fff;
-  box-shadow: 2px 2px 10px grey;
   text-align: center;
 }
-.pendingwork h3 {
-  
-  padding: 15px;
-}
+
 .pendingwork ul {
   list-style-type: none;
   margin-top: 10px;

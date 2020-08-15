@@ -26,7 +26,7 @@
    <body>
       <div class="side_panel">
          <div class="profile" style="text-align:center;width: 100%;">
-            <img src="http://localhost/whiteboard/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
+            <img src="http://localhost/whiteboard/images/helly.jpg" class="img-circle" alt="profile photo" align="center" width="120" height="120">
             <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $firstname; echo " " ;echo $lastname; ?></h3>
          </div>
          <!-- profile -->
@@ -35,13 +35,13 @@
                <li><a href="#" class="active">Home</a></li>
                <li><a href="#">Academics</a></li>
                <li><a href="http://localhost/whiteboard/php/faculty/faculty_attendance.php">Attendance</a></li>
-                <?php 
-                    
+               <!-- if faculty is a time table coordinater they should be able to see the time table coordinator option -->
+                <?php  
+                  // check if the faculty has time table authorities 
                     $sql = "select * from roles where roles='timetable_coordinator'";
                     if($results=$conn->query($sql)) {
                         $row = $results->fetch_assoc();
                         $roles_id = $row['id'];
-                        
                         $sql = "select * from user_roles where user_id = '$user_id' and roles_id = '$roles_id'";
                         if($results = $conn->query($sql)) {
                             if($results->num_rows > 0) {

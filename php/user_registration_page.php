@@ -64,7 +64,7 @@
                         <a href="http://localhost/whiteboard/php/user_login_page.php" class="login"><span>Log In instead</span></a>
                      </div>
                      <div>
-                        <button type="submit" class="btn-f">SUBMIT</button>
+                        <button type="submit" class="btn-f">Create an account</button>
                      </div>
                   </div>
                   <!-- end -->

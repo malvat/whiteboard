@@ -1,0 +1,19 @@
+.proceed-btn {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #3f51b5ff;
+}
+
+select {
+    padding: 3px 6px;
+}
+
+.main-form {
+    padding-top: 5%;
+}
+
+table {
+    width: 90%;
+    margin: 5%;
+}

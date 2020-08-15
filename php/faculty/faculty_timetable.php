@@ -21,12 +21,13 @@ $user_id = $user->getId();
       
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/main.css ">
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/responsive.css">
+      <link rel="stylesheet" href="./../../css/timetable.css">
        
    </head>
    <body>
       <div class="side_panel">
          <div class="profile" style="text-align:center;width: 100%;">
-            <img src="http://localhost/whiteboard/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
+            <img src="http://localhost/whiteboard/images/helly.jpg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
             <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $firstname;
                                                                         echo " ";
                                                                         echo $lastname; ?></h3>
@@ -38,7 +39,6 @@ $user_id = $user->getId();
                <li><a href="#">Academics</a></li>
                <li><a href="http://localhost/whiteboard/php/faculty/faculty_attendance.php">Attendance</a></li>
                 <?php 
-
                 $sql = "select * from roles where roles='timetable_coordinator'";
                 if ($results = $conn->query($sql)) {
                     $row = $results->fetch_assoc();
@@ -83,13 +83,8 @@ $user_id = $user->getId();
          <!-- main section -->
          <div class="work1">
             <div class="news" style="width:80%; height:70%;" id="table">
-                <br>
-                <br>
-                <br>
-                <br>
-                
 
-                <form>
+                <form class="main-form">
                     <h1 style="font-size: 24px;">
                         Please select semester and division
                     </h1>
@@ -130,7 +125,7 @@ $user_id = $user->getId();
                     </script>
                     <br>
                     <br>
-                    <button onclick="onClickProceed()"> Proceed</button>
+                    <button class="proceed-btn" onclick="onClickProceed()"> Proceed</button>
                 </form>
             </div>
           </div>
@@ -145,7 +140,7 @@ $user_id = $user->getId();
                 var table = document.getElementById('table');
                 table.innerHTML = " ";
                 var t = " ";
-                t+="<form action='http://localhost/whiteboard/php/faculty/store_timetable.php?semester="+sem+"&division="+div+"' method='POST' style='margin-left:10%; margin-top:5%;'>";
+                t+="<form action='http://localhost/whiteboard/php/faculty/store_timetable.php?semester="+sem+"&division="+div+"' method='POST'>";
                 t += "<table>";
                 for(var i = 0; i <= 6; i++) {
                     t += "<tr style='border: 1px solid black;'>";
@@ -163,7 +158,7 @@ $user_id = $user->getId();
                     t += "</tr>";
 
                 }
-                t += "</table> <br> <input type='submit' value='submit' style='margin-left:70%;'/> </form>";
+                t += "</table> <br> <input class='proceed-btn' type='submit' value='submit'/> </form>";
                 table.innerHTML = t;   
                 subjectLoad(semester);
                 

@@ -22,11 +22,12 @@
       <link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/main.css ">
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/responsive.css">
+      <link rel="stylesheet" href="./../../css/attendance.css">
    </head>
    <body>
       <div class="side_panel">
          <div class="profile" style="text-align:center;width: 100%;">
-            <img src="http://localhost/whiteboard/images/helly.jpg" class="img-circle" alt="Cinque Terre" align="center" width="120" height="120">
+            <img src="http://localhost/whiteboard/images/helly.jpg" class="img-circle" alt="profile picture" align="center" width="120" height="120">
             <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $firstname; echo " " ;echo $lastname; ?></h3>
          </div>
          <!-- profile -->
@@ -72,7 +73,7 @@
       <section class="canvas fl-left">
          <!-- main section -->
            
-            <div class="news" id="container" style="width:80%; height:70%; overflow-y: scroll;">
+            <div class="news container" id="container" overflow-y: scroll;">
                 <h3>
                     Please select class and subject
                 </h3>
@@ -81,31 +82,28 @@
                     $user_id = $user->getId();
                     $sql = "select distinct semester, name, sid, division from (select schedule.*, subject.semester as sem, subject.name, subject.id as sid from schedule inner join subject on schedule.subject_id = subject.id where user_id = '$user_id') as ss";
                     if($results = $conn->query($sql)) {
-                        echo "<select name=class id=class>";
+                        echo "<select class='class-drop' name=class id=class>";
                         while($row = $results->fetch_assoc()) {
                             $sem = $row['semester'];
                             $div = $row['division'];
                             $sid = $row['sid'];
                             echo "<option value=".$sem.$div.$sid.">";
-                            echo $sem."-";
-                            echo $div."-";
+                            echo $sem." - ";
+                            echo $div." - ";
                             echo $row['name'];
                             echo "</option>";                            
                         } echo "</select>";
                     } else {
-                        echo "some problem";
+                        echo "Could not any data, please try again later";
                     }
                 ?>
                 <br>
                 <br>
-                <input name="date_picker" type='date' id='dd' data-date-inline-picker=true/>
+                <input class="date-picker" name="date_picker" type='date' id='dd' data-date-inline-picker=true/>
                 <br>
                 <br>
-                <button onclick="onProceedClick()">Proceed</button>
-            </div>
-            
-
-         
+                <button class="proceed-btn" onclick="onProceedClick()">Proceed</button>
+            </div>         
       </section>
        <script type="text/javascript" src="../jquery-3.3.1.js"> </script>
         <script type="text/javascript">

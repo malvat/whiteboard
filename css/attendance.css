@@ -1,0 +1,40 @@
+.container {
+    width: 78%;
+    height: 70%;
+}
+
+.class-drop {
+    padding: 4px 15px;
+}
+
+.date-picker {
+    border-radius: 1px;
+    border: 1px solid;
+    font-size: 1em;
+    padding: 2px 15px;
+}
+
+.proceed-btn {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background-color: #3f51b5ff;
+}
+
+.attendance-form {
+    display: flex; 
+    justify-content: space-around;
+}
+
+.attendance-form table {
+    width: 350px;
+}
+
+.attendance-form td {
+    padding: 2% 1%;
+    text-align: left;
+}
+
+.attendance-form tr:last-child > td:last-child {
+    text-align: center;
+}

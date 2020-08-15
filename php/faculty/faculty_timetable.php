@@ -64,12 +64,6 @@ $user_id = $user->getId();
       </div>
       <!-- sidenel-->
       <section class="canvas">
-         <div class="Search">
-            <!-- Search form -->
-            <form class="form-inline">
-               <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-            </form>
-         </div>
          <!-- end Search form -->
          <div class="btn1">
             <form action="http://localhost/whiteboard/php/user_logout.php" method="get">
@@ -158,7 +152,7 @@ $user_id = $user->getId();
                     t += "</tr>";
 
                 }
-                t += "</table> <br> <input class='proceed-btn' type='submit' value='submit'/> </form>";
+                t += "</table> <br> <input class='proceed-btn' type='submit' value='Submit'/> </form>";
                 table.innerHTML = t;   
                 subjectLoad(semester);
                 

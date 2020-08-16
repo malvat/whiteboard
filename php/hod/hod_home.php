@@ -53,12 +53,7 @@
       </div>
       <!-- sidenel-->
       <section class="canvas">
-         <div class="Search">
-            <!-- Search form -->
-            <form class="form-inline">
-               <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-            </form>
-         </div>
+          
          <!-- end Search form -->
          <div class="btn1">
             <form action="http://localhost/whiteboard/php/user_logout.php" method="get">

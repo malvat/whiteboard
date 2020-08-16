@@ -18,15 +18,15 @@
       <!-- 	<link rel="shortcut icon" type="images/X" href="imgs\M.png"> -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
-      
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/main.css ">
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/responsive.css">
+      <link rel="stylesheet" href="./../../css/class.css">
        
    </head>
    <body>
       <div class="side_panel">
          <div class="profile" style="text-align:center;width: 100%;">
-            <img src="http://localhost/whiteboard/images/3.jpeg" class="img-circle" alt="Cinque Terre" align="center" width="100" height="100">
+            <img src="http://localhost/whiteboard/images/helly.jpg" class="img-circle" alt="profile photo" align="center" width="100" height="100">
             <h3 style="vertical-align:middle; margin:auto; width: 100%;"><?php echo $firstname; echo " " ;echo $lastname; ?></h3>
          </div>
          <!-- profile -->
@@ -54,20 +54,12 @@
                 ?>
                
                <li><a href="http://localhost/whiteboard/php/student/student_aboutus.php">About us</a></li>
-               <li><a href="http://localhost/whiteboard/cuber/cuber.html">Cuber Game</a></li>
-               <li><a href="http://localhost/whiteboard/shootdemsquares/index.html">Shoot Dem Squares</a></li>
             </ul>
          </div>
          <!--  sidebar -->
       </div>
       <!-- sidenel-->
       <section class="canvas">
-         <div class="Search">
-            <!-- Search form -->
-            <form class="form-inline">
-               <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-            </form>
-         </div>
          <!-- end Search form -->
          <div class="btn1">
             <form action="http://localhost/whiteboard/php/user_logout.php" method="get">
@@ -81,37 +73,39 @@
          <!-- main section -->
          <div class="work1">
             <div class="news" style="width:80%; height:70%;" id="table">
+               <h3>
+                  Student List
+               </h3>
+               <div class="table-container">
                 <?php
-                $class_id = " ";
-                if(isset($_SESSION['class_id'])) {
-                    $class_id = $_SESSION['class_id'];
-                }
-                $sql = "select * from student inner join user on user.id = student.user_id where class_id = '$class_id'";
-                if($results = $conn->query($sql)) {
-                    echo "<table>";
-                    while($row = $results->fetch_assoc()) {
-                        echo "<tr>";
-
-                        
-
-                        echo "<td>";
-                        echo $row['firstname'];
-                        echo " ";
-                        echo $row['lastname'];
-
-                        echo "</td>";
-
-
-                        echo "<td>";
-                        echo $row['branch'];
-                        echo "</td>";
-
-                      
-                        echo "</tr>";
-                    }
-                    echo "</table>";
-                }
+                  $class_id = " ";
+                  if(isset($_SESSION['class_id'])) {
+                     $class_id = $_SESSION['class_id'];
+                  }
+                  // find students with class id
+                  $sql = "select * from student inner join user on user.id = student.user_id where class_id = '$class_id'";
+                  // print those results in a table
+                  if($results = $conn->query($sql)) {
+                     echo "<table>";
+                     echo "<tr>";
+                     echo "<th> Enrolment </th>";
+                     echo "<th> First Name </th>";
+                     echo "<th> Last Name </th>";
+                     echo "<th> Branch </th>";
+                     echo "</tr>";
+                     while($row = $results->fetch_assoc()) {
+                           echo "<tr>";
+                           echo "<td>".$row['enrolment']."</td>";
+                           echo "<td>".$row['firstname']."</td>";
+                           echo "<td>".$row['lastname']."</td>";
+                           echo "<td>".$row['branch']."</td>";
+                           echo "</tr>";
+                     }
+                     echo "</table>";
+                  }
                 ?>
+                </div>
+                <!-- table container ended  -->
             </div>
           </div>
       </section>

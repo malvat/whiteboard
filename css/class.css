@@ -1,0 +1,14 @@
+table {
+    text-align: left;
+}
+tr {
+    padding: 2px;
+}
+td, th{
+    padding: 5px 20px;
+    border: 1px solid black;
+}
+.table-container {
+    display: flex;
+    justify-content: center;
+}

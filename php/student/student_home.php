@@ -7,6 +7,15 @@
     $firstname = $user->getFirstName();
     $lastname = $user->getLastName();
 
+   // calculate attendance percentage 
+   $id = $user->getId();
+   $sql = "select * from attendance where user_id = '$id'";
+   $results = $conn->query($sql);
+   $total = $results->num_rows;
+   $sql = "select * from attendance where user_id = '$id' and present=1";
+   $results = $conn->query($sql);
+   $present = $results->num_rows;
+   $percent = round($present / $total * 100);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +25,18 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Student - Home</title>
       <!-- 	<link rel="shortcut icon" type="images/X" href="imgs\M.png"> -->
+      <script src="./../../js/attendance-loading.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js" integrity="sha512-rMaqGbYalDaQz0lWNF2L8DHPtf4NW+gSZomExS0LcsNyRS4Rmj21+dt97XfXCZE/E569eX72Bh//Jt1EpStgiA==" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Raleway:500" rel="stylesheet">
       <link rel="stylesheet" href="lib/bxslider/dist/jquery.bxslider.min.css">
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/main.css ">
       <link rel="stylesheet" type="text/css" href="http://localhost/whiteboard/css/responsive.css">
-     
+      <script>
+         window.onload = function() {
+            animate(<?php echo $percent ?>);
+         }
+      </script>
    </head>
    <body>
       <div class="side_panel">
@@ -45,13 +60,6 @@
       </div>
       <!-- sidenel-->
       <section class="canvas">
-         <div class="Search">
-            <!-- Search form -->
-            <form class="form-inline">
-               <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search" aria-label="Search">
-            </form>
-         </div>
-         <!-- end Search form -->
          <div class="btn1">
             <form action="http://localhost/whiteboard/php/user_logout.php" method="get">
                <input type="submit" class="but" value ="Log Out">
@@ -71,8 +79,7 @@
                </ul>
             </div>
             <!--  news -->
-            <div class="Attendance">
-               <!-- baaki -->
+            <div id="attendance" class="Attendance">
                <h3>
                   Attendance
                </h3>
@@ -80,7 +87,6 @@
             <div class="Schedule">
                <h3>Schedule</h3>
                 <?php
-                
                     $student = $_SESSION['student'];
                     $class_id = $student->getClassId();
                     $sql = "select * from class where id = '$class_id'";
